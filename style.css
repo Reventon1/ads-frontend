@@ -1,0 +1,58 @@
+.Ads__header {
+    padding: 24px;
+    font-family: "Roboto", sans-serif;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.Header__title {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 700;
+    cursor: default;
+}
+
+.Button {
+    display: inline-block;
+    float: right;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 7px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.Ads__content {
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.Content__box {
+    margin-left:32px;
+    display: inline-block;
+    background-color: rgb(51, 49, 49);
+    border:solid rgb(33, 12, 151);
+    border-radius: 7px;
+    border-width: 7px;
+}
+
+.Box__info {
+    font-size:20px;
+    font-weight: 700;
+    color: white;
+    padding-bottom:10px;
+}
+
+.Box__name {
+    font-size:20px;
+    font-weight: 700;
+    color: white;
+    padding-bottom:10px;
+}
+
+.Box__phone {
+    font-size:20px;
+    font-weight: 700;
+    color: white;
+}
