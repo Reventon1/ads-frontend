@@ -1,14 +1,21 @@
+
 .Ads__header {
+    background-image: url(/images/duckchannel.jpg);
+    background-color: rgb(54, 52, 52);
     padding: 24px;
     font-family: "Roboto", sans-serif;
     border-bottom: 1px solid #f1f1f1;
 }
 
 .Header__title {
+    background-color: rgb(33, 12, 151);
+    border-radius: 12px;
+    padding: 8px;
     display: inline-block;
     font-size: 32px;
     font-weight: 700;
     cursor: default;
+    color: white;
 }
 
 .Button {
@@ -16,6 +23,7 @@
     float: right;
     font-size: 16px;
     font-weight: 700;
+    margin-top: 10px;
     padding: 8px 12px;
     border-radius: 7px;
     background-color: black;
