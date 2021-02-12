@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var arrayAds = Array();
+    var arrayAds = new Array();
 
     $("#modal").hide();
 
