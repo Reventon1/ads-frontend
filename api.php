@@ -1,15 +1,19 @@
 <?php
 
-$a = 1;
-$b = true;
-$c = 'Строка';
+$pdo = new PDO('mysql:host=localhost;dbname=testdb', 'root', 'root');
 
-echo $b;
+$prepare = $pdo -> prepare('INSERT INTO test (id) values (:id)');
+$prepare -> bindvalue(':id', 132422);
+$prepare -> execute();
 
-if ($b) {
-    echo $c;
+if (isset($_GET['add'])) {
+    echo 'Добавить объявление';
 }
 
-else {
-    echo $a;
+elseif (isset($_GET['id'])) {
+    echo 'Показать объявление';
+}
+
+elseif (isset($_GET['all'])) {
+    echo 'Показть все объявления';
 }
