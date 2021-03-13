@@ -1,19 +1,31 @@
 <?php
 
-$pdo = new PDO('mysql:host=localhost;dbname=testdb', 'root', 'root');
-
-$prepare = $pdo -> prepare('INSERT INTO test (id) values (:id)');
-$prepare -> bindvalue(':id', 132422);
-$prepare -> execute();
+$pdo = new PDO('mysql:host=localhost;dbname=ads_db', 'root', 'root');
 
 if (isset($_GET['add'])) {
-    echo 'Добавить объявление';
+
+    $text = $_POST['text'];
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+
+    $p = $pdo -> prepare(
+        "INSERT INTO ads (text, name, phone) value (:text, :name, :phone)"
+    );
+
+    $p -> bindvalue(':text', $text);
+    $p -> bindvalue(':name', $name);
+    $p -> bindvalue(':phone', $phone);
+    $p -> execute();
 }
 
-elseif (isset($_GET['id'])) {
-    echo 'Показать объявление';
+else if (isset($_GET['all'])) {
+
+    $q = $pdo -> qerry('SELECT * FROM ads');
+
+    $r = $q -> fetchAll(PDO::FETCH_ASSOC);
+
+    header('Content-type: application/json');
+    
+    echo json_encode($r);
 }
 
-elseif (isset($_GET['all'])) {
-    echo 'Показть все объявления';
-}
