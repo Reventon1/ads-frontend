@@ -20,7 +20,7 @@ if (isset($_GET['add'])) {
 
 else if (isset($_GET['all'])) {
 
-    $q = $pdo -> qerry('SELECT * FROM ads');
+    $q = $pdo -> query('SELECT * FROM ads');
 
     $r = $q -> fetchAll(PDO::FETCH_ASSOC);
 
